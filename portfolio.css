@@ -1,0 +1,204 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(191, 190, 188);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+    padding: 10px;
+    width: 100%;
+}
+
+.nav-link {
+    position: relative;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(27, 25, 25);
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.carousel-item > img {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.project-title, .project-description {
+    color: black;
+}
+
+.project-description {
+    text-align: start;
+}
+.carousel-caption {
+    background-color: rgba(212, 206, 199, 0.7);
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.profile-container h3 {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.profile-name {
+    margin-left: 1rem;
+}
+.skills-container {
+    margin-top: 3rem;
+    border: 1px solid transparent;
+}
+
+.skill-card {
+    box-shadow: rgba(7, 6, 6, 0.35) 0px 5px 15px;
+    width: 100%;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.skills-container p {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    text-align: justify;
+}
+
+.progress-bar{
+    font-weight: bold;
+    background-color: rgb(90, 99, 99);
+}
+
+#about h2, #projects h2, #contact h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem;
+}
+
+.card-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-container img {
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    z-index: 1;
+}
+
+.card-content {
+    height: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, rgba(6, 6, 6, 0.8)); 
+    border-radius: 10px;
+    transition: height 0.5s;
+    overflow: hidden;
+    color: white;
+}
+
+.card-container:hover .card-content {
+    height: 60%;
+    z-index: 2;
+}
+
+.card-container:hover img {
+    transform: scale(1.2);
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.list li {
+    list-style: none;
+    margin: 0 2rem;
+    font-size: 2rem;
+}
+
+.list li:hover {
+    transform: scale(1.2);
+    color: rgb(27, 25, 25);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-caption {
+        width: 100%;
+    }
+
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .skills-container p {
+        width: 100%;
+    }
+
+    .list {
+        flex-direction: column;
+    }
+
+    .list li {
+        margin: 1rem 0;
+    }
+    
+}
+
+@media screen {
+   
+}
